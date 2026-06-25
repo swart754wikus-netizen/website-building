@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sprayrite – Die Spuit, Vir Die Boer</title>
+<title>Sprayrite – Professional Spray Equipment | Die Spuit, Vir Die Boer</title>
+<meta name="description" content="Sprayrite manufactures professional spraying equipment for citrus, macadamia, and kiwi farming. Trusted by Southern African farmers for 35+ years. Based in Letsitele, Limpopo.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23E87722'/><text x='16' y='24' font-family='sans-serif' font-weight='900' font-size='22' fill='white' text-anchor='middle'>S</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════
@@ -453,6 +455,34 @@ body:hover #cursor-glow { opacity: 1; }
 
 .hero-left {}
 
+.hero-right {
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-visual {
+  display: flex; flex-direction: column; align-items: center; gap: 32px;
+}
+.hero-badge-large {
+  animation: orbFloat 8s ease-in-out infinite;
+}
+.hero-feature-pills {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.hero-pill {
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.7);
+  letter-spacing: 0.3px;
+  transition: all 0.25s var(--ease);
+}
+.hero-pill:hover {
+  background: rgba(232,119,34,0.1);
+  border-color: rgba(232,119,34,0.3);
+  color: var(--white);
+}
+
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(232,119,34,0.15);
@@ -593,7 +623,8 @@ body:hover #cursor-glow { opacity: 1; }
 .srv-card:hover { background: var(--navy); transform: translateY(-3px); }
 .srv-card:hover::before { transform: scaleX(1); }
 .srv-card:hover .srv-title, .srv-card:hover .srv-text { color: var(--white); }
-.srv-icon { font-size: 34px; margin-bottom: 20px; display: block; }
+.srv-card:hover .srv-icon { color: var(--orange3); }
+.srv-icon { font-size: 34px; margin-bottom: 20px; display: block; color: var(--orange); transition: color 0.25s; }
 .srv-title {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800; font-size: 22px;
@@ -648,7 +679,7 @@ body:hover #cursor-glow { opacity: 1; }
   background: var(--offwhite);
   padding: 36px 28px;
   transition: background 0.22s;
-  cursor: default;
+  cursor: pointer;
   display: flex; flex-direction: column;
   position: relative; overflow: hidden;
 }
@@ -666,7 +697,8 @@ body:hover #cursor-glow { opacity: 1; }
 .prod-card:hover .prod-chip {
   background: var(--orange); color: var(--white);
 }
-.prod-emoji { font-size: 28px; margin-bottom: 18px; display: block; }
+.prod-emoji { font-size: 28px; margin-bottom: 18px; display: block; color: var(--orange); transition: color 0.22s; }
+.prod-card:hover .prod-emoji { color: var(--orange3); }
 .prod-name {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800; font-size: 20px;
@@ -858,7 +890,7 @@ body:hover #cursor-glow { opacity: 1; }
   margin-bottom: 12px; letter-spacing: 0.5px;
 }
 .val-card p { font-size: 14px; color: var(--mid); line-height: 1.7; }
-.val-icon { font-size: 30px; margin-bottom: 18px; display: block; }
+.val-icon { font-size: 30px; margin-bottom: 18px; display: block; color: var(--orange); }
 
 .vision-section {
   background: var(--navy); padding: 96px 5vw;
@@ -1110,7 +1142,7 @@ footer a:hover { color: var(--orange); }
   <a href="#" onclick="goTo('about');toggleMenu()">About</a>
   <a href="#" onclick="goTo('team');toggleMenu()">Team</a>
   <a href="#" onclick="goTo('contact');toggleMenu()">Contact</a>
-  <a href="https://wa.me/27645289171" target="_blank" style="color:var(--green)">💬 WhatsApp Us</a>
+  <a href="https://wa.me/27645289171" target="_blank" style="color:var(--green)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> WhatsApp Us</a>
 </div>
 
 <!-- ═══ HOME ═══ -->
@@ -1167,6 +1199,25 @@ footer a:hover { color: var(--orange); }
         </div>
 
       </div>
+      <div class="hero-right reveal reveal-d3">
+        <div class="hero-visual">
+          <div class="hero-badge-large">
+            <svg width="220" height="220" viewBox="0 0 220 220" fill="none">
+              <circle cx="110" cy="110" r="105" stroke="rgba(232,119,34,0.15)" stroke-width="2"/>
+              <circle cx="110" cy="110" r="85" stroke="rgba(232,119,34,0.1)" stroke-width="1"/>
+              <circle cx="110" cy="110" r="65" stroke="rgba(232,119,34,0.08)" stroke-width="1"/>
+              <text x="110" y="95" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="48" fill="white" letter-spacing="-1">35+</text>
+              <text x="110" y="120" text-anchor="middle" font-family="Barlow" font-weight="600" font-size="11" fill="rgba(255,255,255,0.5)" letter-spacing="3" text-transform="uppercase">YEARS OF</text>
+              <text x="110" y="138" text-anchor="middle" font-family="Barlow Condensed" font-weight="800" font-size="18" fill="var(--orange)" letter-spacing="4">EXCELLENCE</text>
+            </svg>
+          </div>
+          <div class="hero-feature-pills">
+            <div class="hero-pill reveal reveal-d3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Fiberglass &amp; Stainless</div>
+            <div class="hero-pill reveal reveal-d4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg> Ceramic Nozzles</div>
+            <div class="hero-pill reveal reveal-d5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> Full After-Sale Service</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="hero-stats">
@@ -1191,17 +1242,17 @@ footer a:hover { color: var(--orange); }
 
   <div class="services-strip">
     <div class="srv-card reveal" onclick="goTo('products')">
-      <span class="srv-icon">🏭</span>
+      <span class="srv-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/></svg></span>
       <div class="srv-title">Manufacturing</div>
       <div class="srv-text">Custom-built spray machines designed for specific crops, tree sizes and conditions. Every unit built to last.</div>
     </div>
     <div class="srv-card reveal reveal-d1" onclick="goTo('products')">
-      <span class="srv-icon">🔧</span>
+      <span class="srv-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
       <div class="srv-title">Servicing &amp; Repairs</div>
       <div class="srv-text">On-site and workshop servicing, calibration, and genuine parts supply for all Sprayrite equipment.</div>
     </div>
     <div class="srv-card reveal reveal-d2" onclick="goTo('products')">
-      <span class="srv-icon">📦</span>
+      <span class="srv-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span>
       <div class="srv-title">Parts &amp; Accessories</div>
       <div class="srv-text">Pumps, nozzles, regulators, filters, PVC picking bags, Pulprite hammer pulper and more.</div>
     </div>
@@ -1229,49 +1280,49 @@ footer a:hover { color: var(--orange); }
     </div>
     <div class="product-grid">
       <div class="prod-card reveal">
-        <span class="prod-emoji">🏭</span>
+        <span class="prod-emoji"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/></svg></span>
         <div class="prod-name">Sprayer Manufacturing</div>
         <div class="prod-desc">Custom-built spray machines for citrus, macadamia, kiwi, herbicide, and general use. Built from proven designs, refined over 35 years.</div>
         <span class="prod-chip">Core Business</span>
       </div>
       <div class="prod-card reveal reveal-d1">
-        <span class="prod-emoji">🔧</span>
+        <span class="prod-emoji"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
         <div class="prod-name">Servicing &amp; Repairs</div>
         <div class="prod-desc">Workshop and on-farm servicing. Proactive checklists, calibration guidance, and full technical support to keep machines running at peak.</div>
         <span class="prod-chip">After-Sale Support</span>
       </div>
       <div class="prod-card reveal reveal-d2">
-        <span class="prod-emoji">⚙️</span>
+        <span class="prod-emoji"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span>
         <div class="prod-name">Replacement Parts</div>
         <div class="prod-desc">Genuine Sprayrite parts including Jacto JP150/JP300 pumps, regulators, filters, ceramic nozzles, stuffing boxes, and PTO components.</div>
         <span class="prod-chip">Parts &amp; Spares</span>
       </div>
       <div class="prod-card reveal reveal-d3">
-        <span class="prod-emoji">🔨</span>
+        <span class="prod-emoji"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/></svg></span>
         <div class="prod-name">Pulprite Hammer Pulper</div>
         <div class="prod-desc">The Pulprite is a purpose-built hammer pulper for on-farm organic material processing — tough, simple, and built by the same hands as our sprayers.</div>
         <span class="prod-chip">Ancillary Equipment</span>
       </div>
       <div class="prod-card reveal">
-        <span class="prod-emoji">🛍️</span>
+        <span class="prod-emoji"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
         <div class="prod-name">PVC Picking Bags</div>
         <div class="prod-desc">Durable, purpose-designed picking bags for citrus and fruit farms. Built to survive the harvest season and the one after that.</div>
         <span class="prod-chip">Farm Accessories</span>
       </div>
       <div class="prod-card reveal reveal-d1">
-        <span class="prod-emoji">📋</span>
+        <span class="prod-emoji"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></span>
         <div class="prod-name">Documentation &amp; Training</div>
         <div class="prod-desc">Every machine ships with a warranty certificate, calibration guide, nozzle table, PTO diagram, pump diagram, and proactive maintenance checklist.</div>
         <span class="prod-chip">Handover Package</span>
       </div>
       <div class="prod-card reveal reveal-d2">
-        <span class="prod-emoji">💧</span>
+        <span class="prod-emoji"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
         <div class="prod-name">Spraying Nozzles</div>
         <div class="prod-desc">A full range of spraying nozzles including ceramic, standard, and flat-fan types. The right nozzle makes the difference between a good spray and a great one.</div>
         <span class="prod-chip">Nozzles &amp; Fittings</span>
       </div>
       <div class="prod-card reveal reveal-d3">
-        <span class="prod-emoji">✂️</span>
+        <span class="prod-emoji"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg></span>
         <div class="prod-name">Pruning Equipment</div>
         <div class="prod-desc">All pruning equipment for the orchard — from hand pruners to heavy-duty pruning tools. Everything you need to keep your trees in shape between spray seasons.</div>
         <span class="prod-chip">Pruning &amp; Orchard Tools</span>
@@ -1508,17 +1559,17 @@ footer a:hover { color: var(--orange); }
     </div>
     <div class="values-grid">
       <div class="val-card reveal">
-        <span class="val-icon">🌾</span>
+        <span class="val-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/><path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/></svg></span>
         <h3>Farmer First</h3>
         <p>Every design decision starts with the farmer. How they work, what breaks, what wastes time — these are the questions that drive what we build.</p>
       </div>
       <div class="val-card reveal reveal-d1">
-        <span class="val-icon">🔩</span>
+        <span class="val-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
         <h3>Built to Last</h3>
         <p>Stainless steel aerofoils. Ceramic nozzles. Fiberglass fans. We use materials that outlast the cheap alternative because your machine needs to run every season.</p>
       </div>
       <div class="val-card reveal reveal-d2">
-        <span class="val-icon">🤝</span>
+        <span class="val-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
         <h3>After-Sale Commitment</h3>
         <p>The sale is the beginning, not the end. Warranty support, parts availability, and service calls — we stay involved for the life of the machine.</p>
       </div>
